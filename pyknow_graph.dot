@@ -1,0 +1,34 @@
+digraph relation {
+     "Fact";
+     "KnowledgeEngine" [label="KnowledgeEngine"];
+
+     "CE" [label="Conditional Element (CE)"];
+     "Fact" [label="Fact"];
+     "FC" [label="Field Constraint (FC)"];
+     "Pattern" [label="Pattern", shape="box"];
+
+
+     "CE" -> "CE" [label="contains"];
+     "CE" -> "Pattern" [label="contains"];
+
+     "FC" -> "FC" [label="some of them contains"];
+
+     "Pattern" -> "FC" [label="contains"]
+     "Rule" -> "CE" [label="contains"];
+     "Rule" -> "Pattern" [label="contains"];
+
+     "Pattern" -> "Fact" [label="which is a special usage for"];
+
+     "KnowledgeEngine" -> "Rule" [label="contains"];
+     "Fact" -> "KnowledgeEngine" [label="declare"];
+     "Fact" -> "KnowledgeEngine" [label="retract"];
+     "KnowledgeEngine" -> "Agenda" [label="has"];
+     "KnowledgeEngine" -> "FactList" [label="has"];
+     "KnowledgeEngine" -> "Strategy" [label="has"];
+     "FactList" -> "Fact" [label="contains"];
+     "Agenda" -> "Activation" [label="contains"];
+     "Activation" -> "Rule" [label="contains"];
+     "Activation" -> "Fact" [label="contains"];
+     "Activation" -> "Context" [label="contains"];
+     "Strategy" -> "Agenda" [label="organize"];
+   }

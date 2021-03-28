@@ -1,0 +1,8 @@
+https://github.com/daniel-kurushin/test_generator/blob/master/kb.txt
+https://github.com/daniel-kurushin/test_generator/blob/master/kbtbo.txt
+
+https://github.com/daniel-kurushin/Signify/blob/master/graph.dot
+https://github.com/daniel-kurushin/Signify/blob/master/auto_graph.dot
+
+https://github.com/daniel-kurushin/test_solver/blob/master/zz/graph.dot
+
