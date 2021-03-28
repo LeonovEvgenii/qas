@@ -1,5 +1,6 @@
 from random import choice
-import experta
+# import experta
+from pyknow import *
 
 
 class Light(Fact):
@@ -26,3 +27,7 @@ engine.reset()
 engine.declare(Light(color=choice(['green', 'yellow', 'blinking-yellow', 'red'])))
 engine.run()
 
+while 1:
+	c = input("введи цвет: ")
+	engine.declare(Light(color=c))
+	engine.run()
